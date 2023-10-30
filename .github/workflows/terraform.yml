@@ -26,7 +26,7 @@ jobs:
         
 #Setup Terraform retrieves the Terraform CLI used in the GitHub action workflow. The Terraform CLI defaults to the latest stable version of the binary — you can modify the version using the terraform_version attribute. In addition, this step loads the TF_API_TOKEN secret as an environment variable, enabling the Terraform CLI to authenticate to Terraform Cloud.
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3
         with:
           # terraform_version: 1.4.2
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
